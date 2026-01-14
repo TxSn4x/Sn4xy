@@ -20,8 +20,8 @@ async def active_afk(_, message: Message):
         try:
             afktype = reasondb["type"]
             timeafk = reasondb["time"]
-            data = reasondb["data"]
-            reasonafk = reasondb["reason"]
+           # data = reasondb["data"]
+         #   reasonafk = reasondb["reason"]
             seenago = get_readable_time((int(time.time() - timeafk)))
             if afktype == "text":
                 send = await message.reply_text(
