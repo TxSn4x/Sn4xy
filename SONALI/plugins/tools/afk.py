@@ -20,8 +20,8 @@ async def active_afk(_, message: Message):
         try:
             afktype = reasondb["type"]
             timeafk = reasondb["time"]
-           # data = reasondb["data"]
-         #   reasonafk = reasondb["reason"]
+            data = reasondb["data"]
+            reasonafk = reasondb["reason"]
             seenago = get_readable_time((int(time.time() - timeafk)))
             if afktype == "text":
                 send = await message.reply_text(
@@ -63,7 +63,7 @@ async def active_afk(_, message: Message):
 
     if len(message.command) == 1 and not message.reply_to_message:
         details = {
-            "type": "text",
+            "type": None
             "time": time.time(),
             "data": None,
             "reason": None,
@@ -71,34 +71,34 @@ async def active_afk(_, message: Message):
     elif len(message.command) > 1 and not message.reply_to_message:
         _reason = (message.text.split(None, 1)[1].strip())[:100]
         details = {
-            "type": "text_reason",
+            "type": None
             "time": time.time(),
             "data": None,
-            "reason": _reason,
+            "reason": None,
         }
     elif len(message.command) == 1 and message.reply_to_message.animation:
         _data = message.reply_to_message.animation.file_id
         details = {
-            "type": "animation",
+            "type": None
             "time": time.time(),
-            "data": _data,
+            "data": None,
             "reason": None,
         }
     elif len(message.command) > 1 and message.reply_to_message.animation:
         _data = message.reply_to_message.animation.file_id
         _reason = (message.text.split(None, 1)[1].strip())[:100]
         details = {
-            "type": "animation",
+            "type": None
             "time": time.time(),
-            "data": _data,
-            "reason": _reason,
+            "data": None,
+            "reason": None,
         }
     elif len(message.command) == 1 and message.reply_to_message.photo:
         await app.download_media(
             message.reply_to_message, file_name=f"{user_id}.jpg"
         )
         details = {
-            "type": "photo",
+            "type": None
             "time": time.time(),
             "data": None,
             "reason": None,
