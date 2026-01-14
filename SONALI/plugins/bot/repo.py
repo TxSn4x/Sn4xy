@@ -3,15 +3,11 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from SONALI import app
 
 start_txt = """
-✰ 𝗪ᴇʟᴄᴏᴍᴇ ᴛᴏ 𝗧ᴇᴀᴍ 𝗣ᴜʀᴠɪ 𝗥ᴇᴘᴏs ✰
+⟢ Rᴇᴘᴏ Nʜɪ Mɪʟᴇɢᴀ Yᴀɢᴀ
  
-✰ 𝗥ᴇᴘᴏ ᴛᴏ 𝗡ʜɪ 𝗠ɪʟᴇɢᴀ 𝗬ʜᴀ
- 
-✰ 𝗣ᴀʜʟᴇ 𝗣ᴀᴘᴀ 𝗕ᴏʟ 𝗥ᴇᴘᴏ 𝗢ᴡɴᴇʀ ᴋᴏ 
+⟢ Lᴀɢ Fʀᴇᴇ Rᴜɴ 24/7 Nᴏɴ Sᴛᴏᴘ
 
-✰ || @TheSigmaCoder ||
- 
-✰ 𝗥ᴜɴ 24x7 𝗟ᴀɢ 𝗙ʀᴇᴇ 𝗪ɪᴛʜᴏᴜᴛ 𝗦ᴛᴏᴘ
+⟢ @AniWeb_bots
  
 """
 
@@ -19,24 +15,24 @@ start_txt = """
 async def start(_, msg):
     buttons = [
         [ 
-          InlineKeyboardButton("𝗔ᴅᴅ ᴍᴇ 𝗠ᴀʙʏ", url=f"https://t.me/{app.username}?startgroup=true")
+          InlineKeyboardButton("Aᴅᴅ Mᴇ Bᴀʙᴇ", url=f"https://t.me/{app.username}?startgroup=true")
         ],
         [
-          InlineKeyboardButton("𝗛ᴇʟᴘ", url="https://t.me/PURVI_UPDATES"),
-          InlineKeyboardButton("⍣ ፝֠֩ ̶ ̶ꭘⷪ ͓ ꯭፝֠֩͠ ̶꯭ ̶͓𝐑꯭α͕υ꯭𝛅͔ʜ꯭α꯭ɴ͓", url="https://t.me/TheSigmaCoder"),
+          InlineKeyboardButton("Uᴘᴅᴀᴛᴇs", url="https://t.me/Aniweb_bots"),
+          InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url="https://t.me/aniweb_nexus"),
           ],
                [
-                InlineKeyboardButton("𝗧ᴇᴀᴍ 𝗣ᴜʀᴠɪ 𝗕ᴏᴛs", url=f"https://t.me/PURVI_BOTS"),
+                InlineKeyboardButton("Nᴇᴛᴡᴏʀᴋ", url=f"https://t.me/aniweb_network"),
 ],
 [
-InlineKeyboardButton("𝗠ᴀɪɴ 𝗕ᴏᴛ", url=f"https://t.me/PURVI_MUSIC_ROBOT"),
+InlineKeyboardButton("𝖠ɴɪ𝖶ᴇʙ 𝖲ʜᴏɢᴜɴᴀᴛᴇ", url=f"https://t.me/AniWeb_Shogunate"),
 
         ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
     await msg.reply_photo(
-        photo="https://files.catbox.moe/kfg4e6.jpg",
+        photo="https://graph.org/file/e8d2d4c10a317e3b62bcf-f5e9bf6e7ad41e222c.jpg",
         caption=start_txt,
         reply_markup=reply_markup
     )
