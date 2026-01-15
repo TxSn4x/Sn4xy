@@ -20,7 +20,7 @@ from strings import get_string
 
 from ..formatters import int_to_alpha
 
-TEST_ID = int("-1002042572827")
+TEST_ID = int("-1003154207686")
 
 
 def AdminRightsCheck(mystic):
@@ -48,7 +48,7 @@ def AdminRightsCheck(mystic):
                     [
                         InlineKeyboardButton(
                             text="ʜᴏᴡ ᴛᴏ ғɪx ?",
-                            callback_data="RAUSHANmousAdmin",
+                            callback_data="liar_neo",
                         ),
                     ]
                 ]
