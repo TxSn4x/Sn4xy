@@ -4,7 +4,6 @@ from SONALI.utils.admin_check import admin_check
 
 USE_AS_BOT = True
 
-
 def f_sudo_filter(filt, client, message):
     return bool(
         (
@@ -23,8 +22,8 @@ sudo_filter = filters.create(func=f_sudo_filter, name="SudoFilter")
 def onw_filter(filt, client, message):
     if USE_AS_BOT:
         return bool(
-            True  # message.from_user.id in SUDO_USERS
-            and
+            True
+            and  # message.from_user.id in SUDO_USERS
             # t, lt, fl 2013
             not message.edit_date
         )
